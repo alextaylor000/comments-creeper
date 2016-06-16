@@ -1,3 +1,5 @@
+console.log("Creeping all the comments...")
+
 const escapeHtml = function(string) {
   // thanks - http://bit.ly/1YsJt6b
   const chars = {
@@ -29,5 +31,7 @@ let $comments = $('body').contents().map(
     }
   }
 )
+
+console.log(`Found ${$comments.length} comment nodes, building...`)
 
 buildComments($comments)
