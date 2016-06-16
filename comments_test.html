@@ -24,13 +24,6 @@ div.commentspy-commentNode {
   </body>
 
 <script>
-let $comments = $('body').contents().map(
-  function() {
-    if (this.nodeType === 8) {
-      return this.nodeValue
-    }
-  }
-)
 
 // thanks - http://bit.ly/1YsJt6b
 const escapeHtml = function(string) {
@@ -45,14 +38,26 @@ const escapeHtml = function(string) {
 }
 
 
-const buildComment = function(content) {
+const commentNode = function(content) {
   return `<div class="commentspy-commentNode">${escapeHtml(content)}</div>`
 }
 
-$comments.map(function(_, comment) {
-  $('body').append(buildComment(comment))
-})
 
+const buildComments = function(nodes) {
+  nodes.map(function(_, comment) {
+    $('body').prepend(commentNode(comment))
+  })
+}
+
+let $comments = $('body').contents().map(
+  function() {
+    if (this.nodeType === 8) {
+      return this.nodeValue
+    }
+  }
+)
+
+buildComments($comments)
 
 </script>
 </html>

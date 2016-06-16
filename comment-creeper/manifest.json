@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "<!-- CommentCreeper -->",
+  "description": "Exposes HTML comments on any website ;)",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["vendor/jquery-3.0.0.min.js", "background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
