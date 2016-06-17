@@ -5,6 +5,7 @@
   "description": "Uncover any web developer's dirty little secrets by exposing HTML comments on a page at the click of a button!",
   "author": "Alex Taylor",
   "version": "1.0",
+  "short_name": "comments-creeper",
   "icons": {
     "128": "icon128.png",
     "48": "icon48.png"
