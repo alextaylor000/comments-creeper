@@ -9,7 +9,10 @@
     "default_icon": "icon.png"
   },
   "background": {
-    "scripts": ["vendor/jquery-3.0.0.min.js", "background.js"],
+    "scripts": [
+      "vendor/jquery-3.0.0.min.js",
+      "background.js"
+    ],
     "persistent": false
   },
   "permissions": [

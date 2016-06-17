@@ -1,6 +1,8 @@
-console.log("Creeping all the comments...")
-
 const escapeHtml = function(string) {
+  if (typeof string !== 'string') {
+    console.warn(string)
+    throw `string expected, got ${typeof string} instead`
+  }
   // thanks - http://bit.ly/1YsJt6b
   const chars = {
      '&': '&amp;',
@@ -19,22 +21,22 @@ const commentNode = function(content) {
 
 
 const buildComments = function(nodes) {
-  nodes.map(function(_, comment) {
+  nodes.map(function(comment) {
     $('body').prepend(commentNode(comment))
   })
 }
 
-// TODO: this isn't finding nested comments properly
-// $('body').contents() isn't recursive, but find('*') is -
-// however, find() doesn't find comments :/
-let $comments = $('body').contents().map(
-  function() {
-    if (this.nodeType === 8) {
-      return this.nodeValue
-    }
-  }
-)
-
-console.log(`Found ${$comments.length} comment nodes, building...`)
+let $comments = $('html').find('*').
+  map(function() {
+    return $(this).contents().
+      filter(function() {
+        return this.nodeType === 8
+      }).
+      map(function() {
+        return this.nodeValue
+      }).
+      toArray()
+  }).
+  toArray()
 
 buildComments($comments)
