@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="/Users/alextaylor/code/learning/javascript/comments-creeper/comment-creeper/icon-48.png"
+   inkscape:export-xdpi="33.75"
+   inkscape:export-ydpi="33.75">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4157">
+      <stop
+         style="stop-color:#faed6e;stop-opacity:1"
+         offset="0"
+         id="stop4159" />
+      <stop
+         style="stop-color:#a71f17;stop-opacity:1"
+         offset="1"
+         id="stop4161" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4157"
+       id="radialGradient4193"
+       cx="-213.38031"
+       cy="967.83496"
+       fx="-213.38031"
+       fy="967.83496"
+       r="50.459032"
+       gradientTransform="matrix(5.2872516,0.4174904,-0.47210076,5.9788601,1473.1136,-4713.386)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="62.811997"
+     inkscape:cy="66.850742"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1440"
+     inkscape:window-height="851"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-924.36216)">
+    <rect
+       style="fill:url(#radialGradient4193);fill-opacity:1;fill-rule:evenodd;stroke:#999999;stroke-width:0.89342761;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4155"
+       width="106.94603"
+       height="103.78728"
+       x="-165.47043"
+       y="932.18579"
+       transform="matrix(0.98420243,-0.17704681,0.17704681,0.98420243,0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:27.73332977px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-127.91157"
+       y="952.8407"
+       id="text4165"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.9816249,-0.19082076,0.19082076,0.9816249,0,0)"><tspan
+         sodipodi:role="line"
+         x="-127.91157"
+         y="952.8407"
+         id="tspan4169"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.03595543px;line-height:125%;font-family:monospace;-inkscape-font-specification:'monospace, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#919191;fill-opacity:1">&lt;!--</tspan><tspan
+         sodipodi:role="line"
+         x="-127.91157"
+         y="997.85645"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40.07191086px;line-height:125%;font-family:monospace;-inkscape-font-specification:'monospace, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1"
+         id="tspan4179">;)</tspan><tspan
+         sodipodi:role="line"
+         x="-127.91157"
+         y="1027.9756"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.03595543px;line-height:125%;font-family:monospace;-inkscape-font-specification:'monospace, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#8c8c8c;fill-opacity:1"
+         id="tspan4189">--&gt;</tspan></text>
+  </g>
+</svg>
