@@ -1,9 +1,8 @@
+<!-- 0 - this comment is outside html -->
 <html>
-  <!-- (0/9) this comment won't be found because the current
-       algorithm doesn't account for comments which are
-       direct descendants of the html tag -->
+  <!-- 1 -->
   <head>
-    <!-- (1/9) -->
+    <!-- 2 -->
 
 <style type="text/css">
 div.commentspy-commentNode {
@@ -18,26 +17,26 @@ div.commentspy-commentNode {
   </head>
   <body>
     <div>i'm a div</div>
-    <!-- (2/9) -->
+    <!-- 3 -->
     <!--
-      (3/9) includes html literals
+      4 - includes html literals
       <div class='text'>
         <h3>i'm a title</h3>
         <p>look at me whoa</p>
       </div>
     -->
-    <h3>big title</h3> <!-- (4/9) -->
+    <h3>big title</h3> <!-- 5 -->
     <div id="two-nests">
-      <div><!-- (5/9) -->
+      <div><!-- 6 -->
         <div>
           small text
-          <!-- (7/9) -->
+          <!-- 8 -->
           <div style="color: red">
             what a great paragraph this is...
-            <!-- (8/9) -->
+            <!-- 9 -->
           </div>
         </div>
-        <!-- (6/9) -->
+        <!-- 7 -->
       </div>
     </div>
     <ul class="level-1">
@@ -55,26 +54,27 @@ div.commentspy-commentNode {
           <li class="item-c">C</li>
         </ul>
       </li>
-      <li class="item-iii">III<!-- (9/9) w00t!! --></li>
+      <li class="item-iii">III<!-- 10 --></li>
     </ul>
   </body>
-  <script src="comment-creeper/vendor/jquery-3.0.0.min.js"></script>
-  <script src="comment-creeper/creeper.js"></script>
-  <script>
-    const assert = function(expected, actual) {
-      return (expected === actual)
-    }
-
-    const expectedComments = 9
-    const actualComments = $('.commentspy-commentNode').length
-
-    $('body').prepend(`<p><strong>Actual comments:</strong> ${actualComments}`)
-    $('body').prepend(`<p><strong>Expected comments:</strong> ${expectedComments}`)
-
-    if (assert(expectedComments, actualComments)) {
-      $('body').prepend(`<p><em>OK</em></p>`)
-    } else {
-      $('body').prepend(`<p><em>FAIL</em></p>`)
-    }
-  </script>
 </html>
+<!-- 11 -->
+<script src="comment-creeper/vendor/jquery-3.0.0.min.js"></script>
+<script src="comment-creeper/creeper.js"></script>
+<script>
+  const assert = function(expected, actual) {
+    return (expected === actual)
+  }
+
+  const expectedComments = 11
+  const actualComments = $('.commentspy-commentNode').length
+
+  $('body').prepend(`<p><strong>Actual comments:</strong> ${actualComments}`)
+  $('body').prepend(`<p><strong>Expected comments:</strong> ${expectedComments}`)
+
+  if (assert(expectedComments, actualComments)) {
+    $('body').prepend(`<p style="color: green"><em>OK</em></p>`)
+  } else {
+    $('body').prepend(`<p style="color: red"><em>FAIL</em></p>`)
+  }
+</script>

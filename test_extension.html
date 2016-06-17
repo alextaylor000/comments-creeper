@@ -1,33 +1,33 @@
+
+<!-- 0 - this comment is outside html -->
 <html>
-  <!-- (0/9) this comment won't be found because the current
-       algorithm doesn't account for comments which are
-       direct descendants of the html tag -->
+  <!-- 1 -->
   <head>
-    <!-- (1/9) -->
+    <!-- 2 -->
 
   </head>
   <body>
     <div>i'm a div</div>
-    <!-- (2/9) -->
+    <!-- 3 -->
     <!--
-      (3/9) includes html literals
+      4 - includes html literals
       <div class='text'>
         <h3>i'm a title</h3>
         <p>look at me whoa</p>
       </div>
     -->
-    <h3>big title</h3> <!-- (4/9) -->
+    <h3>big title</h3> <!-- 5 -->
     <div id="two-nests">
-      <div><!-- (5/9) -->
+      <div><!-- 6 -->
         <div>
           small text
-          <!-- (7/9) -->
+          <!-- 8 -->
           <div style="color: red">
             what a great paragraph this is...
-            <!-- (8/9) -->
+            <!-- 9 -->
           </div>
         </div>
-        <!-- (6/9) -->
+        <!-- 7 -->
       </div>
     </div>
     <ul class="level-1">
@@ -45,7 +45,8 @@
           <li class="item-c">C</li>
         </ul>
       </li>
-      <li class="item-iii">III<!-- (9/9) w00t!! --></li>
+      <li class="item-iii">III<!-- 10 --></li>
     </ul>
   </body>
 </html>
+<!-- 11  -->

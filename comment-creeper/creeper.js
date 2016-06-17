@@ -26,7 +26,7 @@ const buildComments = function(nodes) {
   })
 }
 
-let $comments = $('html').find('*').
+let $comments = $(document).find('*').
   map(function() {
     return $(this).contents().
       filter(function() {
@@ -39,4 +39,12 @@ let $comments = $('html').find('*').
   }).
   toArray()
 
-buildComments($comments)
+let $documentComments = [...document.childNodes].
+  filter(function(node) {
+    return node.nodeType === 8
+  }).
+  map(function(node) {
+    return node.nodeValue
+  })
+
+buildComments([...$comments, ...$documentComments])
