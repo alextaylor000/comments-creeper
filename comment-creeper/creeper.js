@@ -24,6 +24,9 @@ const buildComments = function(nodes) {
   })
 }
 
+// TODO: this isn't finding nested comments properly
+// $('body').contents() isn't recursive, but find('*') is -
+// however, find() doesn't find comments :/
 let $comments = $('body').contents().map(
   function() {
     if (this.nodeType === 8) {

@@ -23,7 +23,7 @@ div.commentspy-commentNode {
     -->
     <h3>big title</h3> <!-- i'm a comment beside a real element -->
     <div>
-      <p>
+      <p><!-- i'm another nested comment -->
         <small>small text <!-- i'm a nested comment --></small>
       </p>
     </div>
@@ -45,4 +45,20 @@ div.commentspy-commentNode {
       <li class="item-iii">III</li>
     </ul>
   </body>
+  <script src="comment-creeper/vendor/jquery-3.0.0.min.js"></script>
+  <script src="comment-creeper/creeper.js"></script>
+  <script>
+    const assert = function(expected, actual) {
+      return (expected === actual)
+    }
+
+    const expectedComments = 5
+    const actualComments = $('.commentspy-commentNode').length
+    console.log(`expected comments = ${expectedComments}`)
+    console.log(`actual comments = ${actualComments}`)
+    if (assert(expectedComments, actualComments)) {
+      alert("success!")
+    }
+
+  </script>
 </html>
