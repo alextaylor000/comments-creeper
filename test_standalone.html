@@ -1,5 +1,9 @@
 <html>
+  <!-- (0/9) this comment won't be found because the current
+       algorithm doesn't account for comments which are
+       direct descendants of the html tag -->
   <head>
+    <!-- (1/9) -->
 
 <style type="text/css">
 div.commentspy-commentNode {
@@ -14,18 +18,27 @@ div.commentspy-commentNode {
   </head>
   <body>
     <div>i'm a div</div>
-    <!-- i'm a comment -->
+    <!-- (2/9) -->
     <!--
+      (3/9) includes html literals
       <div class='text'>
         <h3>i'm a title</h3>
         <p>look at me whoa</p>
       </div>
     -->
-    <h3>big title</h3> <!-- i'm a comment beside a real element -->
-    <div>
-      <p><!-- i'm another nested comment -->
-        <small>small text <!-- i'm a nested comment --></small>
-      </p>
+    <h3>big title</h3> <!-- (4/9) -->
+    <div id="two-nests">
+      <div><!-- (5/9) -->
+        <div>
+          small text
+          <!-- (7/9) -->
+          <div style="color: red">
+            what a great paragraph this is...
+            <!-- (8/9) -->
+          </div>
+        </div>
+        <!-- (6/9) -->
+      </div>
     </div>
     <ul class="level-1">
       <li class="item-i">I</li>
@@ -42,9 +55,10 @@ div.commentspy-commentNode {
           <li class="item-c">C</li>
         </ul>
       </li>
-      <li class="item-iii">III</li>
+      <li class="item-iii">III<!-- (9/9) w00t!! --></li>
     </ul>
   </body>
+  <script src="comment-creeper/vendor/lodash.core.min.js"></script>
   <script src="comment-creeper/vendor/jquery-3.0.0.min.js"></script>
   <script src="comment-creeper/creeper.js"></script>
   <script>
@@ -52,13 +66,16 @@ div.commentspy-commentNode {
       return (expected === actual)
     }
 
-    const expectedComments = 5
+    const expectedComments = 9
     const actualComments = $('.commentspy-commentNode').length
-    console.log(`expected comments = ${expectedComments}`)
-    console.log(`actual comments = ${actualComments}`)
-    if (assert(expectedComments, actualComments)) {
-      alert("success!")
-    }
 
+    $('body').prepend(`<p><strong>Actual comments:</strong> ${actualComments}`)
+    $('body').prepend(`<p><strong>Expected comments:</strong> ${expectedComments}`)
+
+    if (assert(expectedComments, actualComments)) {
+      $('body').prepend(`<p><em>OK</em></p>`)
+    } else {
+      $('body').prepend(`<p><em>FAIL</em></p>`)
+    }
   </script>
 </html>

@@ -1,0 +1,51 @@
+<html>
+  <!-- (0/9) this comment won't be found because the current
+       algorithm doesn't account for comments which are
+       direct descendants of the html tag -->
+  <head>
+    <!-- (1/9) -->
+
+  </head>
+  <body>
+    <div>i'm a div</div>
+    <!-- (2/9) -->
+    <!--
+      (3/9) includes html literals
+      <div class='text'>
+        <h3>i'm a title</h3>
+        <p>look at me whoa</p>
+      </div>
+    -->
+    <h3>big title</h3> <!-- (4/9) -->
+    <div id="two-nests">
+      <div><!-- (5/9) -->
+        <div>
+          small text
+          <!-- (7/9) -->
+          <div style="color: red">
+            what a great paragraph this is...
+            <!-- (8/9) -->
+          </div>
+        </div>
+        <!-- (6/9) -->
+      </div>
+    </div>
+    <ul class="level-1">
+      <li class="item-i">I</li>
+      <li class="item-ii">II
+        <ul class="level-2">
+          <li class="item-a">A</li>
+          <li class="item-b">B
+            <ul class="level-3">
+              <li class="item-1">1</li>
+              <li class="item-2">2</li>
+              <li class="item-3">3</li>
+            </ul>
+          </li>
+          <li class="item-c">C</li>
+        </ul>
+      </li>
+      <li class="item-iii">III<!-- (9/9) w00t!! --></li>
+    </ul>
+  </body>
+</html>
