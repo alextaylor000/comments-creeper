@@ -59,15 +59,15 @@ div.commentspy-commentNode {
   </body>
 </html>
 <!-- 11 -->
-<script src="comment-creeper/vendor/jquery-3.0.0.min.js"></script>
-<script src="comment-creeper/creeper.js"></script>
+<script src="comments-creeper/vendor/jquery-3.0.0.min.js"></script>
+<script src="comments-creeper/creeper.js"></script>
 <script>
   const assert = function(expected, actual) {
     return (expected === actual)
   }
 
   const expectedComments = 12
-  const actualComments = $('.commentspy-commentNode').length
+  const actualComments = $('.comments-creeper-node').length
 
   $('body').prepend(`<p><strong>Actual comments:</strong> ${actualComments}`)
   $('body').prepend(`<p><strong>Expected comments:</strong> ${expectedComments}`)
