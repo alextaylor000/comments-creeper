@@ -15,9 +15,10 @@ const commentsCreeper = {
     return string.replace(/[&<>"']/g, function(m) { return chars[m]; });
   },
 
+  commentNodeContainer: '<div class="comments-creeper-container"></div>',
 
   commentNode: function(content) {
-    return `<div class="commentspy-commentNode">${this.escapeHtml(content)}</div>`
+    return `<div class="comments-creeper-node">${this.escapeHtml(content)}</div>`
   },
 
   comments: function() {
@@ -50,9 +51,11 @@ const commentsCreeper = {
   }(),
 
   buildComments: function() {
+    $('body').prepend(this.commentNodeContainer)
+
     const nodes = [...this.comments, ...this.documentComments]
     nodes.map(function(comment) {
-      $('body').prepend(this.commentNode(comment))
+      $('.comments-creeper-container').append(this.commentNode(comment))
     }.bind(this))
   },
 }
