@@ -54,9 +54,13 @@ const commentsCreeper = {
     $('body').prepend(this.commentNodeContainer)
 
     const nodes = [...this.comments, ...this.documentComments]
-    nodes.map(function(comment) {
-      $('.comments-creeper-container').append(this.commentNode(comment))
-    }.bind(this))
+    if (nodes.length > 0) {
+      nodes.map(function(comment) {
+        $('.comments-creeper-container').append(this.commentNode(comment))
+      }.bind(this))
+    } else {
+      $('.comments-creeper-container').append(this.commentNode('No comments found!'))
+    }
   },
 }
 
