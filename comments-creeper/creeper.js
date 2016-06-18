@@ -23,14 +23,18 @@ const commentsCreeper = {
   comments: function() {
     return $(document).find('*').
     map(function() {
-      return $(this).contents().
-        filter(function() {
-          return this.nodeType === 8
-        }).
-        map(function() {
-          return this.nodeValue
-        }).
-        toArray()
+      try {
+        return $(this).contents().
+          filter(function() {
+            return this.nodeType === 8
+          }).
+          map(function() {
+            return this.nodeValue
+          }).
+          toArray()
+      } catch(err) {
+        console.warn(`commentsCreeper error: ${err}`)
+      }
     }).
     toArray()
   }(),
