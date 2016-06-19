@@ -9,7 +9,4 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     file: 'creeper.js',
     runAt: 'document_idle'
   });
-
-  // we don't want it to run twice and create duplicate comments
-  chrome.browserAction.disable(tab.id)
 });
