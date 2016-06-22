@@ -4,7 +4,8 @@
   "name": "<!-- CommentsCreeper -->",
   "description": "Uncover any web developer's dirty little secrets by exposing HTML comments on a page at the click of a button!",
   "author": "Alex Taylor",
-  "version": "1.2",
+  "version": "1.3",
+  "minimum_chrome_version": "51",
   "short_name": "comments-creeper",
   "icons": {
     "128": "icon128.png",
